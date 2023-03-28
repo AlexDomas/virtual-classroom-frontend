@@ -67,10 +67,10 @@ function LoginPage({setStudent}) {
                     <form className="login">
                         <div className="login__field">
                             <i className="login__icon fas fa-user"></i>
-                            <input type="text" className="login__input" placeholder="Student Name"/>
+                            <input type="text" className="login__input" placeholder="Student Name" onChange={event => setLoginData({...loginData, name: event.target.value})}/>
                         </div>
-                        <button className="button login__submit">
-                            <span className="button__text">Log In Now</span>
+                        <button className="button login__submit" onClick={handleSubmit}>
+                            <span className="button__text">Login</span>
                             <i className="button__icon fas fa-chevron-right"></i>
                         </button>
                     </form>
