@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import {Route, BrowserRouter} from "react-router-dom";
+import {Navigate, Routes} from "react-router";
+import LoginPage from "./page/LoginPage/LoginPage";
 import './App.css';
 
 function App() {
+
+  const [currentStudent, setCurrentStudent] = useState({
+    id: 0,
+    name: "",
+    isHand: false
+  })
+
+  function setStudent(student) {
+    setCurrentStudent(student)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<LoginPage setStudent={setStudent}/>}/>
+            <Route path="/" element={<Navigate to={'/login'}/>}/>
+        </Routes>
+      </BrowserRouter>
   );
 }
 
