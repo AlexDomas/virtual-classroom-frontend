@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import {useNavigate} from "react-router";
 import StudentService from "../../service/StudentService";
+import ErrorSpanElement from "../../component/error/ErrorSpanElement"
 import '../../style/login.css';
 
 const [BAD_REQUEST, INTERNAL_SERVER_ERROR] = [400, 500]
 
-function LoginPage({setStudent}) {
+const LoginPage = ({setStudent}) => {
 
     const [loginData, setLoginData] = useState({
         id: "",
@@ -36,7 +37,7 @@ function LoginPage({setStudent}) {
                 name: loginData.name,
                 hand: false
             })
-            navigate('/members')
+
         } catch (e) {
             let response = e.response;
 
@@ -67,8 +68,12 @@ function LoginPage({setStudent}) {
                     <form className="login">
                         <div className="login__field">
                             <i className="login__icon fas fa-user"></i>
-                            <input type="text" className="login__input" placeholder="Student Name" onChange={event => setLoginData({...loginData, name: event.target.value})}/>
+                            <input type="text" className="login__input" placeholder="Student Name"
+                                   value={loginData.name}
+                                   onChange={event => setLoginData({...loginData, name: event.target.value})}/>
+                            <ErrorSpanElement errorMessage={error}/>
                         </div>
+
                         <button className="button login__submit" onClick={handleSubmit}>
                             <span className="button__text">Login</span>
                             <i className="button__icon fas fa-chevron-right"></i>
