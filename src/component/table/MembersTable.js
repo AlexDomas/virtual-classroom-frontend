@@ -7,8 +7,8 @@ const MembersTable = ({item}) => {
     return (
         <div className="members__row">
             <div className="members__student">{item.name}</div>
-            <div className="members__hand"><img src={imageHand} className="img-style" alt="image hand"
-                                                style={{visibility: (item.hand === true) ? "visible" : "hidden"}}/>
+            <div className="members__hand">
+                <img src={imageHand} style={{visibility: (item.hand === true) ? "visible" : "hidden"}}/>
             </div>
         </div>
     );
