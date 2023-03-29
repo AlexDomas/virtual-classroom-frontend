@@ -11,7 +11,7 @@ const TOPIC_SUB_CREATE = '/topic/members/create';
 const TOPIC_SUB_DELETE = '/topic/members/delete';
 const TOPIC_SUB_UPDATE = '/topic/members/update';
 
-const MembersPage = ({currentStudent, setMessage}) => {
+const MembersPage = ({currentStudent}) => {
     const navigate = useNavigate();
 
     let stompClient = React.useRef(null);

@@ -27,7 +27,7 @@ const LoginPage = ({setStudent}) => {
             const response = await StudentService.createStudent({
                 name: loginData.name
             })
-            
+
             setError({
                 internalServerError: "",
                 name: ""
@@ -49,7 +49,8 @@ const LoginPage = ({setStudent}) => {
                         internalServerError: ""
                     })
                 }
-            } else {
+            }
+            else {
                 if (response.status === INTERNAL_SERVER_ERROR) {
                     if (response.data.internalServerError !== undefined) {
                         setError({

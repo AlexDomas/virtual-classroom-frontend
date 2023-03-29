@@ -30,7 +30,6 @@ const HeaderForMembersPage = ({currentStudent}) => {
 
     async function handlerLogout(event) {
         if (event !== null) event.preventDefault()
-
         try {
             await StudentService.deleteById(currentStudent.id)
             navigate('/login');
