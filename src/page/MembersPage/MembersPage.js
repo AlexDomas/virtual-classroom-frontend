@@ -34,7 +34,7 @@ const MembersPage = ({currentStudent}) => {
 
     return (
         <div>
-            <HeaderForMembersPage item={currentStudent}/>
+            <HeaderForMembersPage currentStudent={currentStudent}/>
         <div className="table-style">
             {students.map(student => <MembersTable item={student}/>)}
         </div>

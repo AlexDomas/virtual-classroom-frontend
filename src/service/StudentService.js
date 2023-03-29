@@ -1,15 +1,20 @@
-import remoteServer from "./RemoteService";
+import remoteService from "./RemoteService";
 
 export default class StudentService {
 
     static async getAll() {
-        let response = (await remoteServer.get("students/"));
+        let response = (await remoteService.get("students/"));
         return response.data;
     }
     
     static async createStudent(student) {
-        let response = (await remoteServer.post("students/", student));
+        let response = (await remoteService.post("students/", student));
         return response;
+    }
+
+    static async deleteById(id) {
+        let response = (await remoteService.delete("students/" + id));
+        return response.status;
     }
 
 }
