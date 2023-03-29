@@ -1,8 +1,5 @@
 :root {
-    --button-background: dodgerblue;
     --button-color: white;
-
-    --dropdown-highlight: dodgerblue;
     --dropdown-width: 160px;
     --dropdown-background: white;
     --dropdown-color: black;

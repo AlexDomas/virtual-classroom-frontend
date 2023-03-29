@@ -17,7 +17,7 @@
 }
 
 .members__row {
-    padding: 2rem 6rem;
+    padding: 1rem 6rem;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #eee;
@@ -34,8 +34,12 @@
     background-image: linear-gradient(to top left, #39b385, #9be15d);
 }
 
-.members__value {
+.members__hand {
     font-size: 1.2rem;
     margin-left: auto;
+}
+
+img{
+    width: 80px;
 }
 

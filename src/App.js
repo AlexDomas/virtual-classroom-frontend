@@ -6,7 +6,7 @@ import MembersPage from "./page/MembersPage/MembersPage";
 import './App.css';
 
 function App() {
-
+  
   const [currentStudent, setCurrentStudent] = useState({
     id: 0,
     name: "",
@@ -21,7 +21,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<LoginPage setStudent={setStudent}/>}/>
-            <Route path="/members" element={<MembersPage currentStudent={currentStudent}/>}/>
+            <Route path={"/members"} element={<MembersPage currentStudent={currentStudent}/>}/>
             <Route path="/" element={<Navigate to={'/login'}/>}/>
         </Routes>
       </BrowserRouter>

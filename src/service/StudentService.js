@@ -12,6 +12,11 @@ export default class StudentService {
         return response;
     }
 
+    static async raiseHand(student) {
+        let response = (await remoteService.put("students/", student));
+        return response.status;
+    }
+
     static async deleteById(id) {
         let response = (await remoteService.delete("students/" + id));
         return response.status;

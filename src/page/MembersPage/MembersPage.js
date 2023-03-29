@@ -32,15 +32,20 @@ const MembersPage = ({currentStudent}) => {
         }
     }
 
-    return (
-        <div>
-            <HeaderForMembersPage currentStudent={currentStudent}/>
-            <main className="app">
-                <div className="members">
-                    {students.map(student => <MembersTable item={student}/>)}
-                </div>
-            </main>
-        </div>);
+    if(currentStudent.name === ""){
+        navigate('/login');
+    }else
+    {
+        return (
+            <div>
+                <HeaderForMembersPage currentStudent={currentStudent}/>
+                <main className="app">
+                    <div className="members">
+                        {students.map(student => <MembersTable item={student}/>)}
+                    </div>
+                </main>
+            </div>);
+    }
 };
 
 export default MembersPage;
