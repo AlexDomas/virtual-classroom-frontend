@@ -37,7 +37,7 @@ const LoginPage = ({setStudent}) => {
                 name: loginData.name,
                 hand: false
             })
-
+            navigate("/members")
         } catch (e) {
             let response = e.response;
 
