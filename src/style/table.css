@@ -1,0 +1,41 @@
+/* MAIN */
+.app {
+    position: relative;
+    max-width: 50rem;
+    height: 30rem;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: center;
+    transition: all 1s;
+}
+
+.members {
+    grid-row: 1 / span 3;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow-y: scroll;
+}
+
+.members__row {
+    padding: 2rem 6rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.members__student {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    padding: 0.1rem 1rem;
+    border-radius: 10rem;
+    margin-right: 2rem;
+    background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.members__value {
+    font-size: 1.2rem;
+    margin-left: auto;
+}
+

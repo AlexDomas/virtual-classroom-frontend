@@ -35,11 +35,12 @@ const MembersPage = ({currentStudent}) => {
     return (
         <div>
             <HeaderForMembersPage currentStudent={currentStudent}/>
-        <div className="table-style">
-            {students.map(student => <MembersTable item={student}/>)}
-        </div>
-
-    </div>);
+            <main className="app">
+                <div className="members">
+                    {students.map(student => <MembersTable item={student}/>)}
+                </div>
+            </main>
+        </div>);
 };
 
 export default MembersPage;

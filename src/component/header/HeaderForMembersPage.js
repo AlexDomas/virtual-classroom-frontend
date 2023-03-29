@@ -21,12 +21,16 @@ const HeaderForMembersPage = ({currentStudent}) => {
     return (
         <header class="header">
             <nav class="nav">
-                <img
-                    src="logo/logo.png"
-                    alt="Banking System logo"
-                    class="nav__logo"
-                    id="logo"
-                />
+                <ul className="nav__links">
+                    <details className="dropdown">
+                        <summary role="button">
+                            <a className="button">Actions  &#9660;</a>
+                        </summary>
+                        <ul>
+                            <li><a href="#" onClick={handlerLogout}>Raise hand up</a></li>
+                        </ul>
+                    </details>
+                </ul>
                 <ul class="nav__links">
                     <details className="dropdown">
                         <summary role="button">
