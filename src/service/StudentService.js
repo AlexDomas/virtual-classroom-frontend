@@ -12,8 +12,8 @@ export default class StudentService {
         return response;
     }
 
-    static async raiseHand(student) {
-        let response = (await remoteService.put("students/", student));
+    static async raiseHand(id, student) {
+        let response = (await remoteService.put("students/" + id, student));
         return response.status;
     }
 

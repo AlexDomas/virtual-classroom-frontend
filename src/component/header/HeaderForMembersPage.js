@@ -12,7 +12,7 @@ const HeaderForMembersPage = ({currentStudent}) => {
     async function changeStateOfHand() {
         try {
             currentStudent.hand = currentStudent.hand === false
-            let statusCode = await StudentService.raiseHand(currentStudent);
+            let statusCode = await StudentService.raiseHand(currentStudent.id,currentStudent);
             if (statusCode === STATUS_OK) {
                 if (currentStudent.hand !== true) {
                     document.getElementById("action").innerHTML = "Raise hand up"
