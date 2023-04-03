@@ -8,7 +8,7 @@ export default class StudentService {
     }
     
     static async createStudent(student) {
-        let response = (await remoteService.post("students/", student));
+        let response = (await remoteService.post("students/login", student));
         return response;
     }
 
